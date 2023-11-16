@@ -25,3 +25,7 @@ gunzip res/genome/ecoli.fasta.gz
 	 
 	 
 	 #for i in $(ls /home/vant/MásterBioinformática/LinuxAvanzado/testsim/testsim/data/*.fastq.gz | cut -d'_' -f1 | awk -F"data/" '{print $2}' | sort | uniq); do echo $i; done;
+	 
+# Report in Multiqc
+echo "Running MultiQC"
+	multiqc -o out/multiqc $WD
